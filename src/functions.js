@@ -5,15 +5,15 @@
 // reverseNumber(211);   // 112
 // reverseNumber(9876);  // 6789
 
-export const reverseNumber = (num) => {
-  const str = num.toString();
-  let res = '';
+const reverseNumber = (num) => {
+  let res = 0;
 
-  for (let i = 0; i < str.length; i += 1) {
-    res = str[i] + res;
+  while (num > 0) {
+    res = (res * 10) + num % 10;
+    num = Math.floor(num / 10);
   }
-
-  return Number(res);
+  
+  return res;
 };
 
 console.log('Задание 1');
@@ -30,7 +30,7 @@ console.log('');
 // isPerfectSquare(-4); // false
 // isPerfectSquare(0);  // true
 
-export const isPerfectSquare = (num) => num ** 0.5 === Math.round(num ** 0.5);
+const isPerfectSquare = (num) => num ** 0.5 === Math.round(num ** 0.5);
 
 console.log('Задание 2');
 console.log(isPerfectSquare(16));
@@ -46,7 +46,7 @@ console.log('');
 // factorial(2); // 2
 // factorial(5); // 120
 
-export const factorial = (num) => {
+const factorial = (num) => {
   if (num === 0) {
     return 1;
   }
@@ -72,7 +72,7 @@ console.log('');
 // findGCD(10, 11); // 1
 // findGCD(44, 11); // 11
 
-export const findGCD = (num1, num2) => {
+const findGCD = (num1, num2) => {
   const minNum = num1 < num2 ? num1 : num2;
   let maxDiv = 0;
 
@@ -98,3 +98,5 @@ console.log('');
 // mergeStrings();        // ''
 // mergeStrings('a','b'); // 'ab'
 // mergeStrings('a','C','!');     // 'aC!'
+
+export { reverseNumber, isPerfectSquare, factorial, findGCD };

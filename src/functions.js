@@ -14,7 +14,7 @@ export const reverseNumber = (num) => {
   }
 
   return Number(res);
-}
+};
 
 console.log('Задание 1');
 console.log(reverseNumber(11));
@@ -38,12 +38,32 @@ console.log(isPerfectSquare(-4));
 console.log(isPerfectSquare(0));
 console.log('');
 
+
 // Задание 3. Вычисление факториала.
 // Создайте функцию factorial, которая принимает положительное целое число и возвращает его факториал.
 
 // factorial(0); // 1
 // factorial(2); // 2
 // factorial(5); // 120
+
+export const factorial = (num) => {
+  if (num === 0) {
+    return 1;
+  }
+
+  let res = 1;
+  for (let i = 2; i <= num; i += 1) {
+   res *= i;
+  }
+  return res;
+};
+
+console.log('Задание 3');
+console.log(factorial(0));
+console.log(factorial(2));
+console.log(factorial(5));
+console.log('');
+
 
 // Задание 4. Поиск наибольшего общего делителя (НОД).
 // Создайте функцию findGCD, которая принимает два числа и возвращает их наибольший общий делитель.

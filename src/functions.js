@@ -72,6 +72,26 @@ console.log('');
 // findGCD(10, 11); // 1
 // findGCD(44, 11); // 11
 
+export const findGCD = (num1, num2) => {
+  const minNum = num1 < num2 ? num1 : num2;
+  let maxDiv = 0;
+
+  for (let i = 1; i <= minNum; i += 1) {
+    if ((num1 % i === 0) && (num2 % i === 0)) {
+        maxDiv = i;
+    }
+  }
+
+  return maxDiv;
+};
+
+console.log('Задание 4');
+console.log(findGCD(48, 18));
+console.log(findGCD(10, 11));
+console.log(findGCD(44, 11));
+console.log('');
+
+
 // Задание 5. Объединение массивов.
 // Создайте функцию mergeStrings, которая принимает несколько строк и объединяет их в один.
 

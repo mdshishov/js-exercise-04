@@ -99,4 +99,18 @@ console.log('');
 // mergeStrings('a','b'); // 'ab'
 // mergeStrings('a','C','!');     // 'aC!'
 
-export { reverseNumber, isPerfectSquare, factorial, findGCD };
+function mergeStrings() {
+    let res = '';
+    for (let i = 0; i < arguments.length; i += 1) {
+        res += arguments[i];
+    }
+    return res;
+}
+
+console.log('Задание 5');
+console.log(mergeStrings());
+console.log(mergeStrings('a','b'));
+console.log(mergeStrings('a','C','!'));
+console.log('');
+
+export { reverseNumber, isPerfectSquare, factorial, findGCD, mergeStrings };

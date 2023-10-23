@@ -99,10 +99,10 @@ console.log('');
 // mergeStrings('a','b'); // 'ab'
 // mergeStrings('a','C','!');     // 'aC!'
 
-function mergeStrings() {
+const mergeStrings = (...args) => {
     let res = '';
-    for (let i = 0; i < arguments.length; i += 1) {
-        res += arguments[i];
+    for (let i = 0; i < args.length; i += 1) {
+        res += args[i];
     }
     return res;
 }

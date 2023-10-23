@@ -30,6 +30,14 @@ console.log('');
 // isPerfectSquare(-4); // false
 // isPerfectSquare(0);  // true
 
+export const isPerfectSquare = (num) => num ** 0.5 === Math.round(num ** 0.5);
+
+console.log('Задание 2');
+console.log(isPerfectSquare(16));
+console.log(isPerfectSquare(-4));
+console.log(isPerfectSquare(0));
+console.log('');
+
 // Задание 3. Вычисление факториала.
 // Создайте функцию factorial, которая принимает положительное целое число и возвращает его факториал.
 
